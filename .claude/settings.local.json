@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/seed_ai_sample.js)",
+      "Bash(node -e \"\nconst data = require\\('./storage/responses/ai_sample_remote_work.json'\\);\nconsole.log\\('Total responses:', data.length\\);\nconsole.log\\('\\\\nFirst response:'\\);\nconsole.log\\(JSON.stringify\\(data[0], null, 2\\)\\);\nconsole.log\\('\\\\nLast response:'\\);\nconsole.log\\(JSON.stringify\\(data[49], null, 2\\)\\);\n\")",
+      "Bash(node -e \"\nconst responses = require\\('./storage/responses/ai_sample_remote_work.json'\\);\nconst form = require\\('./storage/forms/ai_sample_remote_work.json'\\);\n\n// Compute stats like the API would\nconst stats = {};\nform.questions.forEach\\(q => {\n  const answers = responses.map\\(r => r.answers[q.id]\\).filter\\(a => a !== undefined && a !== null && a !== ''\\);\n  stats[q.id] = { total: answers.length };\n  \n  if \\(['mcq','checkbox','dropdown','true_false'].includes\\(q.type\\)\\) {\n    const counts = {};\n    answers.forEach\\(a => {\n      const vals = Array.isArray\\(a\\) ? a : [a];\n      vals.forEach\\(v => { if\\(v\\) counts[v] = \\(counts[v]||0\\)+1; }\\);\n    }\\);\n    stats[q.id].counts = counts;\n  } else if \\(q.type === 'rating'\\) {\n    const nums = answers.map\\(Number\\).filter\\(n => !isNaN\\(n\\)\\);\n    const dist = {};\n    nums.forEach\\(n => { dist[n] = \\(dist[n]||0\\)+1; }\\);\n    stats[q.id].average = \\(nums.reduce\\(\\(a,b\\)=>a+b,0\\)/nums.length\\).toFixed\\(1\\);\n    stats[q.id].distribution = dist;\n  } else {\n    stats[q.id].answers = answers;\n  }\n}\\);\n\nconsole.log\\(JSON.stringify\\({ total: 50, stats }, null, 2\\)\\);\n\" 2>&1 | head -200)"
+    ]
+  }
+}

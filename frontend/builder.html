@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>FormCraft — Builder</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#6366f1;--primary-dark:#4f46e5;--primary-light:#eef2ff;
+  --success:#10b981;--danger:#ef4444;--bg:#f1f5f9;--card:#fff;
+  --border:#e2e8f0;--text:#1e293b;--muted:#64748b;--radius:12px;
+}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+
+/* TOP BAR */
+.topbar{background:#fff;border-bottom:1px solid var(--border);height:60px;padding:0 24px;
+        display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:100;
+        box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.topbar-left{display:flex;align-items:center;gap:10px;flex:1;min-width:0}
+.back-btn{display:flex;align-items:center;gap:6px;padding:7px 12px;border-radius:8px;
+          font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;
+          border:1px solid var(--border);background:#fff;cursor:pointer;transition:all .15s;white-space:nowrap}
+.back-btn:hover{background:var(--bg);color:var(--text)}
+.form-title-input{flex:1;border:none;outline:none;font-size:17px;font-weight:700;
+                  font-family:'Inter',sans-serif;color:var(--text);background:transparent;
+                  padding:6px 10px;border-radius:8px;min-width:0}
+.form-title-input:hover{background:var(--bg)}
+.form-title-input:focus{background:var(--primary-light)}
+.topbar-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.save-status{font-size:12px;color:var(--muted);white-space:nowrap}
+.save-status.saved{color:var(--success)}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:8px;
+     font-size:13px;font-weight:600;cursor:pointer;border:none;transition:all .15s;font-family:'Inter',sans-serif}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-dark)}
+.btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border)}
+.btn-ghost:hover{background:var(--bg);color:var(--text)}
+.btn-sm{padding:6px 12px;font-size:12px}
+.toggle-wrap{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--muted)}
+.toggle{position:relative;width:36px;height:20px;cursor:pointer}
+.toggle input{opacity:0;width:0;height:0;position:absolute}
+.toggle-slider{position:absolute;inset:0;background:#cbd5e1;border-radius:20px;transition:.2s}
+.toggle-slider:before{content:'';position:absolute;width:14px;height:14px;left:3px;top:3px;
+                      background:#fff;border-radius:50%;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.toggle input:checked+.toggle-slider{background:var(--success)}
+.toggle input:checked+.toggle-slider:before{transform:translateX(16px)}
+
+/* LAYOUT */
+.builder-layout{display:flex;gap:0;max-width:1100px;margin:32px auto;padding:0 24px;min-height:calc(100vh - 160px)}
+.canvas{flex:1;min-width:0}
+
+/* FORM HEADER CARD */
+.form-header-card{background:#fff;border-radius:var(--radius);border:1px solid var(--border);
+                  overflow:hidden;margin-bottom:16px;border-top:6px solid var(--primary)}
+.form-header-body{padding:24px}
+.fh-title{width:100%;border:none;outline:none;font-size:22px;font-weight:800;
+          font-family:'Inter',sans-serif;color:var(--text);margin-bottom:10px}
+.fh-title:focus{border-bottom:2px solid var(--primary)}
+.fh-desc{width:100%;border:none;outline:none;font-size:14px;color:var(--muted);
+         font-family:'Inter',sans-serif;resize:none;min-height:48px}
+.fh-desc:focus{border-bottom:1px solid var(--border)}
+
+/* QUESTION CARD */
+.q-card{background:#fff;border-radius:var(--radius);border:1px solid var(--border);
+        margin-bottom:12px;transition:all .2s;cursor:pointer;position:relative}
+.q-card:hover{border-color:#c7d2fe;box-shadow:0 2px 8px rgba(99,102,241,.1)}
+.q-card.selected{border-color:var(--primary);box-shadow:0 0 0 3px rgba(99,102,241,.12)}
+.q-card .drag-handle{position:absolute;left:0;top:0;bottom:0;width:28px;
+                     display:flex;align-items:center;justify-content:center;
+                     cursor:grab;color:#cbd5e1;font-size:14px;border-radius:var(--radius) 0 0 var(--radius)}
+.q-card:hover .drag-handle{color:#94a3b8;background:#f8fafc}
+.q-card-inner{padding:20px 20px 20px 36px}
+
+/* QUESTION PREVIEW (collapsed) */
+.q-preview{pointer-events:none}
+.q-preview-label{font-size:14px;font-weight:600;color:var(--text);margin-bottom:8px;display:flex;gap:8px;align-items:flex-start}
+.q-required-star{color:var(--danger);font-size:12px}
+.q-type-badge{font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:20px;
+              background:var(--primary-light);color:var(--primary);white-space:nowrap;flex-shrink:0;margin-top:2px}
+.q-preview-option{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);padding:3px 0}
+.q-preview-option .fake-input{width:15px;height:15px;border:2px solid #cbd5e1;
+                               border-radius:50%;flex-shrink:0}
+.q-preview-option .fake-check{border-radius:3px}
+.q-preview-text{height:32px;background:#f8fafc;border:1px solid var(--border);
+                border-radius:6px;width:100%;max-width:320px}
+.q-preview-rating{display:flex;gap:4px;font-size:20px;color:#fbbf24}
+
+/* QUESTION EDITOR (expanded) */
+.q-editor{}
+.q-editor-row{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px;flex-wrap:wrap}
+.q-text-input{flex:1;min-width:200px;padding:10px 14px;border:1.5px solid var(--border);
+              border-radius:8px;font-size:14px;font-family:'Inter',sans-serif;
+              outline:none;transition:border-color .15s;color:var(--text)}
+.q-text-input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(99,102,241,.1)}
+.type-select{padding:10px 14px;border:1.5px solid var(--border);border-radius:8px;
+             font-size:13px;font-family:'Inter',sans-serif;outline:none;cursor:pointer;
+             background:#fff;color:var(--text);min-width:160px}
+.type-select:focus{border-color:var(--primary)}
+
+/* OPTIONS EDITOR */
+.options-list{margin-bottom:12px}
+.option-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.option-icon{width:18px;height:18px;border:2px solid #cbd5e1;border-radius:50%;flex-shrink:0}
+.option-icon.check{border-radius:4px}
+.option-input{flex:1;padding:7px 12px;border:1px solid var(--border);border-radius:7px;
+              font-size:13px;font-family:'Inter',sans-serif;outline:none}
+.option-input:focus{border-color:var(--primary)}
+.remove-option{color:#cbd5e1;background:none;border:none;cursor:pointer;font-size:18px;
+               width:26px;height:26px;display:flex;align-items:center;justify-content:center;
+               border-radius:50%;transition:all .15s;flex-shrink:0}
+.remove-option:hover{background:#fef2f2;color:var(--danger)}
+.add-option-btn{display:flex;align-items:center;gap:6px;color:var(--primary);
+                font-size:13px;font-weight:600;background:none;border:none;
+                cursor:pointer;padding:6px 0;transition:opacity .15s}
+.add-option-btn:hover{opacity:.75}
+
+/* EDITOR FOOTER */
+.q-editor-footer{display:flex;align-items:center;justify-content:space-between;
+                 padding-top:14px;border-top:1px solid var(--border);flex-wrap:wrap;gap:8px}
+.q-footer-left{display:flex;align-items:center;gap:12px}
+.required-toggle{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--muted)}
+.delete-q-btn{display:flex;align-items:center;gap:5px;color:var(--danger);font-size:13px;
+              font-weight:600;background:none;border:none;cursor:pointer;padding:6px 10px;
+              border-radius:7px;transition:all .15s}
+.delete-q-btn:hover{background:#fef2f2}
+.duplicate-btn{display:flex;align-items:center;gap:5px;color:var(--muted);font-size:13px;
+               font-weight:600;background:none;border:1px solid var(--border);cursor:pointer;
+               padding:6px 10px;border-radius:7px;transition:all .15s}
+.duplicate-btn:hover{background:var(--bg);color:var(--text)}
+
+/* ADD QUESTION BUTTON */
+.add-q-section{text-align:center;margin:8px 0 32px}
+.add-q-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;
+           background:#fff;border:2px dashed var(--border);border-radius:var(--radius);
+           font-size:14px;font-weight:600;color:var(--muted);cursor:pointer;
+           transition:all .2s;font-family:'Inter',sans-serif}
+.add-q-btn:hover{border-color:var(--primary);color:var(--primary);background:var(--primary-light)}
+
+/* QUESTION TYPE PICKER MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.5);z-index:999;
+               display:flex;align-items:center;justify-content:center;padding:20px;
+               opacity:0;pointer-events:none;transition:opacity .2s}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.type-modal{background:#fff;border-radius:18px;padding:28px;width:100%;max-width:520px;
+            transform:translateY(20px);transition:transform .2s}
+.modal-overlay.open .type-modal{transform:translateY(0)}
+.type-modal h2{font-size:17px;font-weight:700;margin-bottom:20px;text-align:center}
+.type-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.type-tile{background:var(--bg);border:2px solid transparent;border-radius:12px;
+           padding:16px 10px;text-align:center;cursor:pointer;transition:all .15s}
+.type-tile:hover{border-color:var(--primary);background:var(--primary-light);transform:scale(1.03)}
+.type-tile .t-icon{font-size:26px;margin-bottom:6px}
+.type-tile .t-label{font-size:12px;font-weight:600;color:var(--text)}
+
+/* TOAST */
+.toast{position:fixed;bottom:24px;right:24px;background:#1e293b;color:#fff;
+       padding:12px 20px;border-radius:10px;font-size:14px;font-weight:500;
+       transform:translateY(80px);opacity:0;transition:all .3s;z-index:9999}
+.toast.show{transform:translateY(0);opacity:1}
+
+@media(max-width:640px){
+  .builder-layout{padding:0 12px;margin:20px auto}
+  .topbar{padding:0 12px}
+  .type-grid{grid-template-columns:repeat(3,1fr)}
+  .topbar .save-status,.topbar .toggle-wrap{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <a class="back-btn" href="/">← Back</a>
+    <input class="form-title-input" id="titleInput" placeholder="Untitled Form" oninput="markDirty()">
+  </div>
+  <div class="topbar-right">
+    <div class="toggle-wrap">
+      <label class="toggle"><input type="checkbox" id="acceptToggle" checked onchange="markDirty()"><span class="toggle-slider"></span></label>
+      Accepting
+    </div>
+    <span class="save-status" id="saveStatus"></span>
+    <a class="btn btn-ghost btn-sm" id="previewBtn" target="_blank">👁 Preview</a>
+    <button class="btn btn-primary btn-sm" onclick="saveForm()">💾 Save</button>
+  </div>
+</div>
+
+<!-- BUILDER CANVAS -->
+<div class="builder-layout">
+  <div class="canvas">
+    <!-- Form header -->
+    <div class="form-header-card" id="formHeaderCard">
+      <div class="form-header-body">
+        <input class="fh-title" id="fhTitle" placeholder="Form Title" oninput="syncTitle()">
+        <textarea class="fh-desc" id="fhDesc" placeholder="Form description (optional)" oninput="markDirty()" rows="2"></textarea>
+      </div>
+    </div>
+
+    <!-- Questions list -->
+    <div id="questionsList"></div>
+
+    <!-- Add question -->
+    <div class="add-q-section">
+      <button class="add-q-btn" onclick="openTypePicker()">＋ Add Question</button>
+    </div>
+  </div>
+</div>
+
+<!-- QUESTION TYPE PICKER MODAL -->
+<div class="modal-overlay" id="typeModal" onclick="closeTypePickerOutside(event)">
+  <div class="type-modal">
+    <h2>Choose Question Type</h2>
+    <div class="type-grid">
+      <div class="type-tile" onclick="addQuestion('text')">
+        <div class="t-icon">💬</div><div class="t-label">Short Answer</div>
+      </div>
+      <div class="type-tile" onclick="addQuestion('paragraph')">
+        <div class="t-icon">📝</div><div class="t-label">Paragraph</div>
+      </div>
+      <div class="type-tile" onclick="addQuestion('mcq')">
+        <div class="t-icon">🔘</div><div class="t-label">Multiple Choice</div>
+      </div>
+      <div class="type-tile" onclick="addQuestion('checkbox')">
+        <div class="t-icon">☑️</div><div class="t-label">Checkboxes</div>
+      </div>
+      <div class="type-tile" onclick="addQuestion('dropdown')">
+        <div class="t-icon">📋</div><div class="t-label">Dropdown</div>
+      </div>
+      <div class="type-tile" onclick="addQuestion('true_false')">
+        <div class="t-icon">⚖️</div><div class="t-label">True / False</div>
+      </div>
+      <div class="type-tile" onclick="addQuestion('rating')">
+        <div class="t-icon">⭐</div><div class="t-label">Rating</div>
+      </div>
+      <div class="type-tile" onclick="addQuestion('date')">
+        <div class="t-icon">📅</div><div class="t-label">Date</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const TYPE_LABELS = {
+  text:'Short Answer', paragraph:'Paragraph', mcq:'Multiple Choice',
+  checkbox:'Checkboxes', dropdown:'Dropdown', true_false:'True / False',
+  rating:'Rating (1–5)', date:'Date'
+};
+
+let form = { id: null, title: '', description: '', questions: [], theme_color: '#6366f1', accepting_responses: true };
+let selectedQId = null;
+let dirty = false;
+let saving = false;
+
+// ── init ────────────────────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded', async () => {
+  const id = new URLSearchParams(location.search).get('id');
+  if (id) {
+    const res = await fetch(`/api/forms/${id}`);
+    form = await res.json();
+    applyFormToUI();
+  }
+  renderQuestions();
+  initSortable();
+  updatePreviewLink();
+});
+
+function applyFormToUI() {
+  document.getElementById('titleInput').value = form.title;
+  document.getElementById('fhTitle').value = form.title;
+  document.getElementById('fhDesc').value = form.description || '';
+  document.getElementById('acceptToggle').checked = form.accepting_responses !== false;
+  document.getElementById('formHeaderCard').style.borderTopColor = form.theme_color || '#6366f1';
+}
+
+function syncTitle() {
+  const v = document.getElementById('fhTitle').value;
+  document.getElementById('titleInput').value = v;
+  form.title = v;
+  markDirty();
+}
+
+function updatePreviewLink() {
+  if (form.id) document.getElementById('previewBtn').href = `form.html?id=${form.id}`;
+}
+
+// ── save ────────────────────────────────────────────────────────────
+async function saveForm() {
+  if (saving) return;
+  saving = true;
+  form.title = document.getElementById('fhTitle').value.trim() || 'Untitled Form';
+  form.description = document.getElementById('fhDesc').value.trim();
+  form.accepting_responses = document.getElementById('acceptToggle').checked;
+
+  const method = form.id ? 'PUT' : 'POST';
+  const url    = form.id ? `/api/forms/${form.id}` : '/api/forms';
+  const res = await fetch(url, {
+    method, headers: {'Content-Type':'application/json'}, body: JSON.stringify(form)
+  });
+  const saved = await res.json();
+  form.id = saved.id;
+  history.replaceState({}, '', `?id=${form.id}`);
+  updatePreviewLink();
+  setSaveStatus('saved');
+  dirty = false;
+  saving = false;
+}
+
+function markDirty() {
+  dirty = true;
+  setSaveStatus('unsaved');
+}
+
+function setSaveStatus(state) {
+  const el = document.getElementById('saveStatus');
+  if (state === 'saved') { el.textContent = '✓ Saved'; el.className = 'save-status saved'; }
+  else { el.textContent = '● Unsaved changes'; el.className = 'save-status'; }
+}
+
+// ── questions ────────────────────────────────────────────────────────
+function addQuestion(type) {
+  const q = {
+    id: 'q_' + Date.now(),
+    type,
+    question: '',
+    required: false,
+    options: ['mcq','checkbox','dropdown'].includes(type) ? ['Option 1','Option 2'] : [],
+  };
+  form.questions.push(q);
+  closeTypePicker();
+  renderQuestions();
+  selectQ(q.id);
+  markDirty();
+}
+
+function deleteQuestion(id) {
+  form.questions = form.questions.filter(q => q.id !== id);
+  if (selectedQId === id) selectedQId = null;
+  renderQuestions();
+  markDirty();
+}
+
+function duplicateQuestion(id) {
+  const orig = form.questions.find(q => q.id === id);
+  if (!orig) return;
+  const copy = JSON.parse(JSON.stringify(orig));
+  copy.id = 'q_' + Date.now();
+  const idx = form.questions.findIndex(q => q.id === id);
+  form.questions.splice(idx + 1, 0, copy);
+  renderQuestions();
+  selectQ(copy.id);
+  markDirty();
+}
+
+function selectQ(id) {
+  selectedQId = id;
+  renderQuestions();
+  setTimeout(() => {
+    const el = document.querySelector(`.q-card[data-id="${id}"]`);
+    if (el) el.scrollIntoView({behavior:'smooth', block:'nearest'});
+  }, 50);
+}
+
+function updateQ(id, field, value) {
+  const q = form.questions.find(q => q.id === id);
+  if (q) { q[field] = value; markDirty(); }
+}
+
+function updateOption(qid, idx, value) {
+  const q = form.questions.find(q => q.id === qid);
+  if (q) { q.options[idx] = value; markDirty(); }
+}
+
+function addOption(qid) {
+  const q = form.questions.find(q => q.id === qid);
+  if (q) { q.options.push('Option ' + (q.options.length + 1)); renderQuestions(); selectQ(qid); markDirty(); }
+}
+
+function removeOption(qid, idx) {
+  const q = form.questions.find(q => q.id === qid);
+  if (q && q.options.length > 1) { q.options.splice(idx, 1); renderQuestions(); selectQ(qid); markDirty(); }
+}
+
+function changeType(qid, newType) {
+  const q = form.questions.find(q => q.id === qid);
+  if (!q) return;
+  q.type = newType;
+  if (['mcq','checkbox','dropdown'].includes(newType) && !q.options.length) {
+    q.options = ['Option 1','Option 2'];
+  } else if (!['mcq','checkbox','dropdown'].includes(newType)) {
+    q.options = [];
+  }
+  renderQuestions();
+  selectQ(qid);
+  markDirty();
+}
+
+// ── render ───────────────────────────────────────────────────────────
+function renderQuestions() {
+  const list = document.getElementById('questionsList');
+  if (!form.questions.length) {
+    list.innerHTML = `<div style="text-align:center;padding:32px;color:var(--muted);font-size:14px;
+      background:#fff;border-radius:12px;border:2px dashed var(--border);margin-bottom:12px">
+      No questions yet. Click <strong>+ Add Question</strong> to get started.</div>`;
+    return;
+  }
+  list.innerHTML = form.questions.map((q, i) => renderQCard(q, i)).join('');
+}
+
+function renderQCard(q, i) {
+  const sel = selectedQId === q.id;
+  return `
+  <div class="q-card ${sel ? 'selected' : ''}" data-id="${q.id}" onclick="selectQ('${q.id}')">
+    <div class="drag-handle">⠿</div>
+    <div class="q-card-inner">
+      ${sel ? renderEditor(q, i) : renderPreview(q, i)}
+    </div>
+  </div>`;
+}
+
+function renderPreview(q, i) {
+  const label = `<div class="q-preview-label">
+    <span>${i+1}. ${esc(q.question) || '<em style="color:#94a3b8">Untitled question</em>'}</span>
+    ${q.required ? '<span class="q-required-star">*</span>' : ''}
+    <span class="q-type-badge">${TYPE_LABELS[q.type]||q.type}</span>
+  </div>`;
+
+  let input = '';
+  if (q.type === 'text')     input = '<div class="q-preview-text"></div>';
+  else if (q.type === 'paragraph') input = '<div class="q-preview-text" style="height:60px"></div>';
+  else if (q.type === 'date')  input = '<div class="q-preview-text" style="max-width:160px"></div>';
+  else if (q.type === 'rating') input = '<div class="q-preview-rating">★★★★★</div>';
+  else if (q.type === 'true_false') input = ['True','False'].map(o =>
+    `<div class="q-preview-option"><div class="fake-input"></div>${o}</div>`).join('');
+  else if (['mcq','dropdown'].includes(q.type)) input = (q.options||[]).map(o =>
+    `<div class="q-preview-option"><div class="fake-input"></div>${esc(o)}</div>`).join('');
+  else if (q.type === 'checkbox') input = (q.options||[]).map(o =>
+    `<div class="q-preview-option"><div class="fake-input fake-check"></div>${esc(o)}</div>`).join('');
+
+  return `<div class="q-preview">${label}${input}</div>`;
+}
+
+function renderEditor(q, i) {
+  const hasOptions = ['mcq','checkbox','dropdown'].includes(q.type);
+  const optionIcon = q.type === 'checkbox' ? 'check' : '';
+
+  const optionsHtml = hasOptions ? `
+    <div class="options-list" id="opts_${q.id}">
+      ${(q.options||[]).map((o, oi) => `
+        <div class="option-row">
+          <div class="option-icon ${optionIcon}"></div>
+          <input class="option-input" value="${esc(o)}" placeholder="Option ${oi+1}"
+            oninput="updateOption('${q.id}',${oi},this.value)" onclick="event.stopPropagation()">
+          <button class="remove-option" onclick="event.stopPropagation();removeOption('${q.id}',${oi})" title="Remove">×</button>
+        </div>`).join('')}
+    </div>
+    <button class="add-option-btn" onclick="event.stopPropagation();addOption('${q.id}')">＋ Add option</button>
+  ` : '';
+
+  const tf = q.type === 'true_false' ? `
+    <div style="display:flex;gap:10px;margin-top:4px">
+      <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:#f0fdf4;border-radius:8px;font-size:13px;font-weight:600;color:#16a34a">✓ True</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:#fef2f2;border-radius:8px;font-size:13px;font-weight:600;color:#ef4444">✗ False</span>
+    </div>` : '';
+
+  const ratingPreview = q.type === 'rating' ? `
+    <div style="display:flex;gap:6px;font-size:22px;color:#fbbf24;margin-top:6px">★★★★★</div>` : '';
+
+  return `
+  <div class="q-editor">
+    <div class="q-editor-row">
+      <input class="q-text-input" value="${esc(q.question)}" placeholder="Question ${i+1}"
+        oninput="updateQ('${q.id}','question',this.value)" onclick="event.stopPropagation()">
+      <select class="type-select" onchange="changeType('${q.id}',this.value)" onclick="event.stopPropagation()">
+        ${Object.entries(TYPE_LABELS).map(([v,l]) =>
+          `<option value="${v}" ${q.type===v?'selected':''}>${l}</option>`).join('')}
+      </select>
+    </div>
+    ${optionsHtml}
+    ${tf}
+    ${ratingPreview}
+    <div class="q-editor-footer">
+      <div class="q-footer-left">
+        <button class="duplicate-btn" onclick="event.stopPropagation();duplicateQuestion('${q.id}')">⧉ Duplicate</button>
+        <button class="delete-q-btn" onclick="event.stopPropagation();deleteQuestion('${q.id}')">🗑 Delete</button>
+      </div>
+      <label class="required-toggle" onclick="event.stopPropagation()">
+        <label class="toggle" style="width:32px;height:18px">
+          <input type="checkbox" ${q.required?'checked':''} onchange="updateQ('${q.id}','required',this.checked)">
+          <span class="toggle-slider"></span>
+        </label>
+        Required
+      </label>
+    </div>
+  </div>`;
+}
+
+// ── sortable drag & drop ─────────────────────────────────────────────
+function initSortable() {
+  Sortable.create(document.getElementById('questionsList'), {
+    handle: '.drag-handle',
+    animation: 180,
+    ghostClass: 'sortable-ghost',
+    onEnd(evt) {
+      const moved = form.questions.splice(evt.oldIndex, 1)[0];
+      form.questions.splice(evt.newIndex, 0, moved);
+      markDirty();
+    }
+  });
+}
+
+// ── type picker modal ────────────────────────────────────────────────
+function openTypePicker()  { document.getElementById('typeModal').classList.add('open'); }
+function closeTypePicker() { document.getElementById('typeModal').classList.remove('open'); }
+function closeTypePickerOutside(e) { if (e.target === e.currentTarget) closeTypePicker(); }
+
+// ── utils ────────────────────────────────────────────────────────────
+function esc(s) {
+  if (!s) return '';
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeTypePicker();
+  if ((e.ctrlKey||e.metaKey) && e.key === 's') { e.preventDefault(); saveForm(); }
+});
+
+// Auto-save on unload
+window.addEventListener('beforeunload', e => {
+  if (dirty) { e.preventDefault(); e.returnValue = ''; }
+});
+</script>
+<style>
+.sortable-ghost{opacity:.3;background:var(--primary-light) !important}
+</style>
+</body>
+</html>

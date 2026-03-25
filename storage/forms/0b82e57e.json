@@ -1,0 +1,93 @@
+{
+  "id": "0b82e57e",
+  "title": "Customer Feedback Survey (Copy)",
+  "description": "Help us improve by answering a few quick questions about your recent experience.",
+  "theme_color": "#6366f1",
+  "accepting_responses": true,
+  "created_at": "2026-02-27T11:47:12.167Z",
+  "updated_at": "2026-02-27T11:47:12.167Z",
+  "questions": [
+    {
+      "id": "q_17721928321670c2e",
+      "type": "rating",
+      "question": "Overall, how satisfied are you with our product?",
+      "scale": 5
+    },
+    {
+      "id": "q_1772192832168j8w3",
+      "type": "mcq",
+      "question": "How often do you use our product?",
+      "options": [
+        "Daily",
+        "Several times a week",
+        "Once a week",
+        "Rarely"
+      ]
+    },
+    {
+      "id": "q_1772192832168ujcj",
+      "type": "mcq",
+      "question": "How easy was it to get started?",
+      "options": [
+        "Very easy",
+        "Somewhat easy",
+        "Neutral",
+        "Difficult"
+      ]
+    },
+    {
+      "id": "q_17721928321680b1v",
+      "type": "checkbox",
+      "question": "Which features do you find most valuable?",
+      "options": [
+        "Form builder UI",
+        "Templates",
+        "Analytics & reports",
+        "Integrations",
+        "Sharing & embedding"
+      ]
+    },
+    {
+      "id": "q_1772192832168vn5e",
+      "type": "text",
+      "question": "What is one thing we could improve?"
+    },
+    {
+      "id": "q_1772192832168uhra",
+      "type": "true_false",
+      "question": "Would you recommend our product to a friend or colleague?",
+      "options": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "id": "q_1772192832168ipqs",
+      "type": "dropdown",
+      "question": "What best describes your role?",
+      "options": [
+        "Student",
+        "Individual creator",
+        "Small business",
+        "Enterprise",
+        "Other"
+      ]
+    },
+    {
+      "id": "q_17721928321687tbh",
+      "type": "rating",
+      "question": "How satisfied are you with the form builder speed and performance?",
+      "scale": 5
+    },
+    {
+      "id": "q_1772192832168f6mq",
+      "type": "paragraph",
+      "question": "Please describe a recent use case where our product helped you."
+    },
+    {
+      "id": "q_1772192832168o1vy",
+      "type": "date",
+      "question": "When did you last use our product?"
+    }
+  ]
+}

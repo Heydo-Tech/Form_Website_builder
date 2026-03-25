@@ -1,0 +1,1118 @@
+[
+  {
+    "id": "r_001",
+    "submitted_at": "2025-12-29T15:28:46.296Z",
+    "_persona": "C",
+    "answers": {
+      "q1": "6",
+      "q2": "3–5 years",
+      "q3": "Sales / Marketing",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "GitHub / GitLab"
+      ],
+      "q5": "Context-switching between too many communication channels (Slack, email, meetings).",
+      "q6": "Yes",
+      "q7": "5",
+      "q8": "9–10 hours",
+      "q9": "A 2–3 days remote / 2 days in-office hybrid would suit me best. I value focused remote days for deep work and in-person days for brainstorming and 1-on-1s.",
+      "q10": "2023-12-04"
+    }
+  },
+  {
+    "id": "r_002",
+    "submitted_at": "2025-12-31T23:37:46.552Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "8",
+      "q2": "More than 5 years",
+      "q3": "Product / Project Management",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence",
+        "GitHub / GitLab",
+        "Figma / Miro",
+        "Loom / async video"
+      ],
+      "q5": "Time-zone differences with overseas colleagues.",
+      "q6": "Yes",
+      "q7": "5",
+      "q8": "8 hours",
+      "q9": "I thrive fully remote and would like to keep it that way permanently. Occasional in-person offsites (quarterly) energize the team without the daily commute overhead.",
+      "q10": "2022-07-27"
+    }
+  },
+  {
+    "id": "r_003",
+    "submitted_at": "2026-01-02T22:35:12.317Z",
+    "_persona": "B",
+    "answers": {
+      "q1": "4",
+      "q2": "6–12 months",
+      "q3": "HR / People",
+      "q4": [
+        "Zoom / Google Meet",
+        "Google Workspace",
+        "Notion / Confluence",
+        "Figma / Miro"
+      ],
+      "q5": "Distractions at home (kids, noise, chores) make it hard to focus.",
+      "q6": "No",
+      "q7": "2",
+      "q8": "More than 10 hours",
+      "q9": "I struggle working from home right now; a 4-day in-office schedule with one remote day would work best for me.",
+      "q10": "2025-11-09"
+    }
+  },
+  {
+    "id": "r_004",
+    "submitted_at": "2026-01-02T23:48:34.974Z",
+    "_persona": "B",
+    "answers": {
+      "q1": "3",
+      "q2": "6–12 months",
+      "q3": "Customer Support",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Google Workspace",
+        "Notion / Confluence",
+        "Loom / async video"
+      ],
+      "q5": "Distractions at home (kids, noise, chores) make it hard to focus.",
+      "q6": "No",
+      "q7": "1",
+      "q8": "9–10 hours",
+      "q9": "Honestly, I would prefer going back to the office most days. I need that structure and face-time to stay motivated and learn from colleagues.",
+      "q10": "2025-09-11"
+    }
+  },
+  {
+    "id": "r_005",
+    "submitted_at": "2026-01-03T14:40:31.541Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "10",
+      "q2": "More than 5 years",
+      "q3": "Engineering / Development",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "GitHub / GitLab",
+        "Loom / async video"
+      ],
+      "q5": "Maintaining clear boundaries between work and personal time.",
+      "q6": "Yes",
+      "q7": "5",
+      "q8": "8 hours",
+      "q9": "Async-first culture with one optional in-office day per week. No mandatory presence — results over attendance.",
+      "q10": "2021-10-12"
+    }
+  },
+  {
+    "id": "r_006",
+    "submitted_at": "2026-01-03T18:56:52.677Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "9",
+      "q2": "3–5 years",
+      "q3": "Engineering / Development",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence",
+        "GitHub / GitLab"
+      ],
+      "q5": "Occasional internet outages disrupt video calls.",
+      "q6": "Yes",
+      "q7": "4",
+      "q8": "6–7 hours",
+      "q9": "Async-first culture with one optional in-office day per week. No mandatory presence — results over attendance.",
+      "q10": "2021-06-23"
+    }
+  },
+  {
+    "id": "r_007",
+    "submitted_at": "2026-01-05T14:47:48.862Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "8",
+      "q2": "More than 5 years",
+      "q3": "Engineering / Development",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence",
+        "Figma / Miro",
+        "Google Workspace",
+        "Jira / Linear"
+      ],
+      "q5": "Time-zone differences with overseas colleagues.",
+      "q6": "Yes",
+      "q7": "4",
+      "q8": "6–7 hours",
+      "q9": "Permanently remote with a generous home-office stipend and annual all-hands gathering. That is the sweet spot for focus and culture.",
+      "q10": "2020-10-20"
+    }
+  },
+  {
+    "id": "r_008",
+    "submitted_at": "2026-01-06T22:21:54.733Z",
+    "_persona": "B",
+    "answers": {
+      "q1": "3",
+      "q2": "6–12 months",
+      "q3": "Sales / Marketing",
+      "q4": [
+        "Zoom / Google Meet"
+      ],
+      "q5": "Feeling isolated and disconnected from the team — I miss spontaneous office chat.",
+      "q6": "No",
+      "q7": "1",
+      "q8": "More than 10 hours",
+      "q9": "I would like a hybrid setup — 3 days in-office and 2 from home. Enough in-person time to feel connected but still some flexibility.",
+      "q10": "2025-11-29"
+    }
+  },
+  {
+    "id": "r_009",
+    "submitted_at": "2026-01-08T18:25:38.076Z",
+    "_persona": "D",
+    "answers": {
+      "q1": "3",
+      "q2": "More than 5 years",
+      "q3": "Product / Project Management",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence",
+        "Jira / Linear",
+        "GitHub / GitLab",
+        "Figma / Miro",
+        "Google Workspace"
+      ],
+      "q5": "Always-on expectation — messages arrive at all hours and I feel pressure to respond immediately.",
+      "q6": "Yes",
+      "q7": "3",
+      "q8": "9–10 hours",
+      "q9": "Fully remote but with strict no-meeting Wednesdays and an explicit expectation that Slack is not a real-time medium.",
+      "q10": "2021-10-31"
+    }
+  },
+  {
+    "id": "r_010",
+    "submitted_at": "2026-01-09T06:21:59.309Z",
+    "_persona": "C",
+    "answers": {
+      "q1": "6",
+      "q2": "1–2 years",
+      "q3": "Engineering / Development",
+      "q4": [
+        "Zoom / Google Meet",
+        "Figma / Miro",
+        "Google Workspace",
+        "Loom / async video"
+      ],
+      "q5": "Onboarding new team members remotely takes much longer than in-person.",
+      "q6": "No",
+      "q7": "5",
+      "q8": "6–7 hours",
+      "q9": "A 2–3 days remote / 2 days in-office hybrid would suit me best. I value focused remote days for deep work and in-person days for brainstorming and 1-on-1s.",
+      "q10": "2025-01-29"
+    }
+  },
+  {
+    "id": "r_011",
+    "submitted_at": "2026-01-10T10:56:40.961Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "8",
+      "q2": "More than 5 years",
+      "q3": "Product / Project Management",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence",
+        "Google Workspace",
+        "Loom / async video"
+      ],
+      "q5": "Time-zone differences with overseas colleagues.",
+      "q6": "Yes",
+      "q7": "5",
+      "q8": "6–7 hours",
+      "q9": "Permanently remote with a generous home-office stipend and annual all-hands gathering. That is the sweet spot for focus and culture.",
+      "q10": "2022-11-12"
+    }
+  },
+  {
+    "id": "r_012",
+    "submitted_at": "2026-01-10T11:48:20.890Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "9",
+      "q2": "More than 5 years",
+      "q3": "Design / Creative",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence",
+        "GitHub / GitLab",
+        "Figma / Miro",
+        "Google Workspace",
+        "Jira / Linear"
+      ],
+      "q5": "Keeping team-wide meetings short enough to stay focused.",
+      "q6": "Yes",
+      "q7": "5",
+      "q8": "6–7 hours",
+      "q9": "Full remote with optional in-person collaboration weeks a few times a year. I value the flexibility to work from anywhere while still meeting colleagues face-to-face.",
+      "q10": "2022-10-13"
+    }
+  },
+  {
+    "id": "r_013",
+    "submitted_at": "2026-01-10T13:50:18.706Z",
+    "_persona": "C",
+    "answers": {
+      "q1": "7",
+      "q2": "1–2 years",
+      "q3": "Product / Project Management",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Loom / async video"
+      ],
+      "q5": "Keeping documentation up to date so async collaboration actually works.",
+      "q6": "Yes",
+      "q7": "3",
+      "q8": "9–10 hours",
+      "q9": "Remote-first with a well-equipped shared office available whenever I need it. No mandated days, but a great space when I want human contact.",
+      "q10": "2024-05-11"
+    }
+  },
+  {
+    "id": "r_014",
+    "submitted_at": "2026-01-12T19:20:20.453Z",
+    "_persona": "D",
+    "answers": {
+      "q1": "6",
+      "q2": "3–5 years",
+      "q3": "Engineering / Development",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Jira / Linear",
+        "Figma / Miro",
+        "Loom / async video"
+      ],
+      "q5": "Too many tools, too many notifications — constant context switching drains me.",
+      "q6": "No",
+      "q7": "2",
+      "q8": "9–10 hours",
+      "q9": "Remote with strong async norms — no reply expected after 6 PM, no weekend messages, real PTO. That would restore my enthusiasm for remote work.",
+      "q10": "2021-11-26"
+    }
+  },
+  {
+    "id": "r_015",
+    "submitted_at": "2026-01-12T23:50:08.915Z",
+    "_persona": "B",
+    "answers": {
+      "q1": "3",
+      "q2": "Less than 6 months",
+      "q3": "Finance / Operations",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Google Workspace",
+        "Loom / async video"
+      ],
+      "q5": "Distractions at home (kids, noise, chores) make it hard to focus.",
+      "q6": "No",
+      "q7": "1",
+      "q8": "More than 10 hours",
+      "q9": "I struggle working from home right now; a 4-day in-office schedule with one remote day would work best for me.",
+      "q10": "2025-04-15"
+    }
+  },
+  {
+    "id": "r_016",
+    "submitted_at": "2026-01-15T00:35:58.179Z",
+    "_persona": "B",
+    "answers": {
+      "q1": "4",
+      "q2": "6–12 months",
+      "q3": "Customer Support",
+      "q4": [
+        "Zoom / Google Meet",
+        "GitHub / GitLab"
+      ],
+      "q5": "Unclear expectations and slow feedback cycles from my manager.",
+      "q6": "No",
+      "q7": "3",
+      "q8": "More than 10 hours",
+      "q9": "I would like a hybrid setup — 3 days in-office and 2 from home. Enough in-person time to feel connected but still some flexibility.",
+      "q10": "2025-08-17"
+    }
+  },
+  {
+    "id": "r_017",
+    "submitted_at": "2026-01-15T21:08:27.021Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "10",
+      "q2": "3–5 years",
+      "q3": "Product / Project Management",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Figma / Miro",
+        "Google Workspace",
+        "Loom / async video"
+      ],
+      "q5": "Keeping team-wide meetings short enough to stay focused.",
+      "q6": "Yes",
+      "q7": "4",
+      "q8": "6–7 hours",
+      "q9": "Permanently remote with a generous home-office stipend and annual all-hands gathering. That is the sweet spot for focus and culture.",
+      "q10": "2021-06-09"
+    }
+  },
+  {
+    "id": "r_018",
+    "submitted_at": "2026-01-16T14:38:57.959Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "9",
+      "q2": "More than 5 years",
+      "q3": "Product / Project Management",
+      "q4": [
+        "Slack / Teams",
+        "Notion / Confluence",
+        "GitHub / GitLab",
+        "Figma / Miro",
+        "Google Workspace",
+        "Jira / Linear"
+      ],
+      "q5": "Time-zone differences with overseas colleagues.",
+      "q6": "Yes",
+      "q7": "5",
+      "q8": "8 hours",
+      "q9": "Permanently remote with a generous home-office stipend and annual all-hands gathering. That is the sweet spot for focus and culture.",
+      "q10": "2020-08-26"
+    }
+  },
+  {
+    "id": "r_019",
+    "submitted_at": "2026-01-17T12:09:18.433Z",
+    "_persona": "B",
+    "answers": {
+      "q1": "4",
+      "q2": "Less than 6 months",
+      "q3": "Customer Support",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence",
+        "Figma / Miro"
+      ],
+      "q5": "Struggling to \"switch off\" — the laptop is always there.",
+      "q6": "No",
+      "q7": "3",
+      "q8": "More than 10 hours",
+      "q9": "I struggle working from home right now; a 4-day in-office schedule with one remote day would work best for me.",
+      "q10": "2025-11-20"
+    }
+  },
+  {
+    "id": "r_020",
+    "submitted_at": "2026-01-18T16:38:45.443Z",
+    "_persona": "B",
+    "answers": {
+      "q1": "4",
+      "q2": "6–12 months",
+      "q3": "Sales / Marketing",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Google Workspace"
+      ],
+      "q5": "No dedicated desk; working from the kitchen table hurts my posture and focus.",
+      "q6": "No",
+      "q7": "2",
+      "q8": "8 hours",
+      "q9": "If remote work continues I need the company to provide proper equipment and a co-working stipend so I have somewhere quiet to go.",
+      "q10": "2026-01-13"
+    }
+  },
+  {
+    "id": "r_021",
+    "submitted_at": "2026-01-18T20:08:57.914Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "8",
+      "q2": "More than 5 years",
+      "q3": "Design / Creative",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "GitHub / GitLab",
+        "Google Workspace",
+        "Jira / Linear",
+        "Loom / async video"
+      ],
+      "q5": "Keeping team-wide meetings short enough to stay focused.",
+      "q6": "Yes",
+      "q7": "4",
+      "q8": "6–7 hours",
+      "q9": "Permanently remote with a generous home-office stipend and annual all-hands gathering. That is the sweet spot for focus and culture.",
+      "q10": "2021-10-23"
+    }
+  },
+  {
+    "id": "r_022",
+    "submitted_at": "2026-01-18T20:22:25.590Z",
+    "_persona": "C",
+    "answers": {
+      "q1": "6",
+      "q2": "3–5 years",
+      "q3": "Engineering / Development",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Jira / Linear",
+        "Google Workspace",
+        "Loom / async video"
+      ],
+      "q5": "Onboarding new team members remotely takes much longer than in-person.",
+      "q6": "Yes",
+      "q7": "3",
+      "q8": "9–10 hours",
+      "q9": "About 60 % remote and 40 % in-person. Monthly team sprints in the office keep alignment, the rest of the time async-first remote.",
+      "q10": "2023-07-15"
+    }
+  },
+  {
+    "id": "r_023",
+    "submitted_at": "2026-01-20T14:52:02.602Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "8",
+      "q2": "More than 5 years",
+      "q3": "Product / Project Management",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence",
+        "Google Workspace",
+        "Loom / async video"
+      ],
+      "q5": "Back-to-back virtual meetings leaving little deep-work time.",
+      "q6": "Yes",
+      "q7": "5",
+      "q8": "6–7 hours",
+      "q9": "Async-first culture with one optional in-office day per week. No mandatory presence — results over attendance.",
+      "q10": "2022-07-03"
+    }
+  },
+  {
+    "id": "r_024",
+    "submitted_at": "2026-01-22T15:26:51.002Z",
+    "_persona": "D",
+    "answers": {
+      "q1": "4",
+      "q2": "3–5 years",
+      "q3": "Finance / Operations",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Jira / Linear",
+        "Google Workspace"
+      ],
+      "q5": "Too many tools, too many notifications — constant context switching drains me.",
+      "q6": "No",
+      "q7": "2",
+      "q8": "9–10 hours",
+      "q9": "Shorter work days with protected focus blocks. I would accept any ratio of remote/office if we fixed the culture of constant interruption first.",
+      "q10": "2020-08-30"
+    }
+  },
+  {
+    "id": "r_025",
+    "submitted_at": "2026-01-23T14:23:51.060Z",
+    "_persona": "C",
+    "answers": {
+      "q1": "6",
+      "q2": "1–2 years",
+      "q3": "Engineering / Development",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence"
+      ],
+      "q5": "Keeping documentation up to date so async collaboration actually works.",
+      "q6": "No",
+      "q7": "3",
+      "q8": "9–10 hours",
+      "q9": "About 60 % remote and 40 % in-person. Monthly team sprints in the office keep alignment, the rest of the time async-first remote.",
+      "q10": "2024-12-28"
+    }
+  },
+  {
+    "id": "r_026",
+    "submitted_at": "2026-01-23T22:29:59.510Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "9",
+      "q2": "More than 5 years",
+      "q3": "Product / Project Management",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence",
+        "Figma / Miro",
+        "Google Workspace"
+      ],
+      "q5": "Maintaining clear boundaries between work and personal time.",
+      "q6": "Yes",
+      "q7": "4",
+      "q8": "6–7 hours",
+      "q9": "Async-first culture with one optional in-office day per week. No mandatory presence — results over attendance.",
+      "q10": "2020-10-25"
+    }
+  },
+  {
+    "id": "r_027",
+    "submitted_at": "2026-01-24T11:31:05.663Z",
+    "_persona": "C",
+    "answers": {
+      "q1": "8",
+      "q2": "3–5 years",
+      "q3": "Design / Creative",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence",
+        "Jira / Linear",
+        "Google Workspace",
+        "Loom / async video"
+      ],
+      "q5": "Onboarding new team members remotely takes much longer than in-person.",
+      "q6": "Yes",
+      "q7": "4",
+      "q8": "6–7 hours",
+      "q9": "Flexible hybrid — I choose which days to come in based on what I need to accomplish that week. Autonomy is key.",
+      "q10": "2024-03-21"
+    }
+  },
+  {
+    "id": "r_028",
+    "submitted_at": "2026-01-26T12:00:53.276Z",
+    "_persona": "B",
+    "answers": {
+      "q1": "2",
+      "q2": "6–12 months",
+      "q3": "HR / People",
+      "q4": [
+        "Loom / async video"
+      ],
+      "q5": "Struggling to \"switch off\" — the laptop is always there.",
+      "q6": "No",
+      "q7": "1",
+      "q8": "9–10 hours",
+      "q9": "Honestly, I would prefer going back to the office most days. I need that structure and face-time to stay motivated and learn from colleagues.",
+      "q10": "2025-11-12"
+    }
+  },
+  {
+    "id": "r_029",
+    "submitted_at": "2026-01-26T16:16:09.022Z",
+    "_persona": "C",
+    "answers": {
+      "q1": "6",
+      "q2": "1–2 years",
+      "q3": "Design / Creative",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "GitHub / GitLab",
+        "Google Workspace"
+      ],
+      "q5": "Meeting fatigue — too many check-ins that could have been async updates.",
+      "q6": "No",
+      "q7": "4",
+      "q8": "8 hours",
+      "q9": "About 60 % remote and 40 % in-person. Monthly team sprints in the office keep alignment, the rest of the time async-first remote.",
+      "q10": "2024-12-23"
+    }
+  },
+  {
+    "id": "r_030",
+    "submitted_at": "2026-01-26T23:15:46.922Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "9",
+      "q2": "3–5 years",
+      "q3": "Engineering / Development",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence"
+      ],
+      "q5": "Keeping team-wide meetings short enough to stay focused.",
+      "q6": "Yes",
+      "q7": "5",
+      "q8": "8 hours",
+      "q9": "Full remote with optional in-person collaboration weeks a few times a year. I value the flexibility to work from anywhere while still meeting colleagues face-to-face.",
+      "q10": "2021-11-07"
+    }
+  },
+  {
+    "id": "r_031",
+    "submitted_at": "2026-01-27T07:09:24.595Z",
+    "_persona": "D",
+    "answers": {
+      "q1": "6",
+      "q2": "More than 5 years",
+      "q3": "Engineering / Development",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence",
+        "Jira / Linear",
+        "GitHub / GitLab",
+        "Google Workspace",
+        "Loom / async video"
+      ],
+      "q5": "Leadership keeps adding meetings instead of trusting async communication.",
+      "q6": "Yes",
+      "q7": "2",
+      "q8": "More than 10 hours",
+      "q9": "Fully remote but with strict no-meeting Wednesdays and an explicit expectation that Slack is not a real-time medium.",
+      "q10": "2020-05-26"
+    }
+  },
+  {
+    "id": "r_032",
+    "submitted_at": "2026-01-27T08:22:25.367Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "9",
+      "q2": "3–5 years",
+      "q3": "Engineering / Development",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence",
+        "Figma / Miro",
+        "Google Workspace",
+        "Loom / async video"
+      ],
+      "q5": "Keeping team-wide meetings short enough to stay focused.",
+      "q6": "Yes",
+      "q7": "5",
+      "q8": "8 hours",
+      "q9": "I thrive fully remote and would like to keep it that way permanently. Occasional in-person offsites (quarterly) energize the team without the daily commute overhead.",
+      "q10": "2020-06-18"
+    }
+  },
+  {
+    "id": "r_033",
+    "submitted_at": "2026-01-31T16:28:50.722Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "9",
+      "q2": "3–5 years",
+      "q3": "Engineering / Development",
+      "q4": [
+        "Notion / Confluence",
+        "GitHub / GitLab",
+        "Google Workspace",
+        "Jira / Linear",
+        "Loom / async video"
+      ],
+      "q5": "Keeping team-wide meetings short enough to stay focused.",
+      "q6": "Yes",
+      "q7": "4",
+      "q8": "8 hours",
+      "q9": "Async-first culture with one optional in-office day per week. No mandatory presence — results over attendance.",
+      "q10": "2022-03-15"
+    }
+  },
+  {
+    "id": "r_034",
+    "submitted_at": "2026-02-03T04:04:40.233Z",
+    "_persona": "C",
+    "answers": {
+      "q1": "6",
+      "q2": "3–5 years",
+      "q3": "Design / Creative",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence",
+        "Jira / Linear",
+        "Figma / Miro",
+        "Google Workspace",
+        "Loom / async video"
+      ],
+      "q5": "Keeping documentation up to date so async collaboration actually works.",
+      "q6": "No",
+      "q7": "3",
+      "q8": "6–7 hours",
+      "q9": "Remote-first with a well-equipped shared office available whenever I need it. No mandated days, but a great space when I want human contact.",
+      "q10": "2023-03-26"
+    }
+  },
+  {
+    "id": "r_035",
+    "submitted_at": "2026-02-06T03:33:51.555Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "9",
+      "q2": "3–5 years",
+      "q3": "Design / Creative",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence",
+        "Jira / Linear",
+        "Loom / async video"
+      ],
+      "q5": "Back-to-back virtual meetings leaving little deep-work time.",
+      "q6": "Yes",
+      "q7": "4",
+      "q8": "6–7 hours",
+      "q9": "I thrive fully remote and would like to keep it that way permanently. Occasional in-person offsites (quarterly) energize the team without the daily commute overhead.",
+      "q10": "2020-08-05"
+    }
+  },
+  {
+    "id": "r_036",
+    "submitted_at": "2026-02-07T11:47:47.054Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "9",
+      "q2": "More than 5 years",
+      "q3": "Design / Creative",
+      "q4": [
+        "Zoom / Google Meet",
+        "Notion / Confluence",
+        "Jira / Linear"
+      ],
+      "q5": "Back-to-back virtual meetings leaving little deep-work time.",
+      "q6": "Yes",
+      "q7": "4",
+      "q8": "8 hours",
+      "q9": "Async-first culture with one optional in-office day per week. No mandatory presence — results over attendance.",
+      "q10": "2020-03-30"
+    }
+  },
+  {
+    "id": "r_037",
+    "submitted_at": "2026-02-07T15:32:30.458Z",
+    "_persona": "B",
+    "answers": {
+      "q1": "4",
+      "q2": "Less than 6 months",
+      "q3": "Finance / Operations",
+      "q4": [
+        "Slack / Teams",
+        "Google Workspace",
+        "GitHub / GitLab",
+        "Figma / Miro"
+      ],
+      "q5": "Struggling to \"switch off\" — the laptop is always there.",
+      "q6": "No",
+      "q7": "3",
+      "q8": "More than 10 hours",
+      "q9": "Honestly, I would prefer going back to the office most days. I need that structure and face-time to stay motivated and learn from colleagues.",
+      "q10": "2026-01-05"
+    }
+  },
+  {
+    "id": "r_038",
+    "submitted_at": "2026-02-08T07:36:52.162Z",
+    "_persona": "C",
+    "answers": {
+      "q1": "8",
+      "q2": "1–2 years",
+      "q3": "Sales / Marketing",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence",
+        "Google Workspace"
+      ],
+      "q5": "Onboarding new team members remotely takes much longer than in-person.",
+      "q6": "Yes",
+      "q7": "3",
+      "q8": "8 hours",
+      "q9": "Remote-first with a well-equipped shared office available whenever I need it. No mandated days, but a great space when I want human contact.",
+      "q10": "2024-10-18"
+    }
+  },
+  {
+    "id": "r_039",
+    "submitted_at": "2026-02-11T04:19:49.198Z",
+    "_persona": "B",
+    "answers": {
+      "q1": "5",
+      "q2": "Less than 6 months",
+      "q3": "Customer Support",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Google Workspace"
+      ],
+      "q5": "No dedicated desk; working from the kitchen table hurts my posture and focus.",
+      "q6": "No",
+      "q7": "3",
+      "q8": "9–10 hours",
+      "q9": "I struggle working from home right now; a 4-day in-office schedule with one remote day would work best for me.",
+      "q10": "2025-05-05"
+    }
+  },
+  {
+    "id": "r_040",
+    "submitted_at": "2026-02-11T15:16:15.812Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "10",
+      "q2": "More than 5 years",
+      "q3": "Product / Project Management",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "GitHub / GitLab",
+        "Google Workspace",
+        "Jira / Linear",
+        "Loom / async video"
+      ],
+      "q5": "Maintaining clear boundaries between work and personal time.",
+      "q6": "Yes",
+      "q7": "5",
+      "q8": "6–7 hours",
+      "q9": "Async-first culture with one optional in-office day per week. No mandatory presence — results over attendance.",
+      "q10": "2020-06-07"
+    }
+  },
+  {
+    "id": "r_041",
+    "submitted_at": "2026-02-12T04:52:08.640Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "10",
+      "q2": "3–5 years",
+      "q3": "Engineering / Development",
+      "q4": [
+        "Slack / Teams",
+        "Notion / Confluence",
+        "GitHub / GitLab"
+      ],
+      "q5": "Maintaining clear boundaries between work and personal time.",
+      "q6": "Yes",
+      "q7": "5",
+      "q8": "8 hours",
+      "q9": "I thrive fully remote and would like to keep it that way permanently. Occasional in-person offsites (quarterly) energize the team without the daily commute overhead.",
+      "q10": "2020-07-11"
+    }
+  },
+  {
+    "id": "r_042",
+    "submitted_at": "2026-02-13T10:49:11.810Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "10",
+      "q2": "3–5 years",
+      "q3": "Design / Creative",
+      "q4": [
+        "Slack / Teams",
+        "Notion / Confluence",
+        "GitHub / GitLab",
+        "Figma / Miro",
+        "Google Workspace",
+        "Loom / async video"
+      ],
+      "q5": "Time-zone differences with overseas colleagues.",
+      "q6": "Yes",
+      "q7": "4",
+      "q8": "6–7 hours",
+      "q9": "Async-first culture with one optional in-office day per week. No mandatory presence — results over attendance.",
+      "q10": "2022-08-19"
+    }
+  },
+  {
+    "id": "r_043",
+    "submitted_at": "2026-02-16T11:52:58.992Z",
+    "_persona": "C",
+    "answers": {
+      "q1": "7",
+      "q2": "1–2 years",
+      "q3": "Product / Project Management",
+      "q4": [
+        "Zoom / Google Meet",
+        "Jira / Linear",
+        "Figma / Miro",
+        "Google Workspace"
+      ],
+      "q5": "Meeting fatigue — too many check-ins that could have been async updates.",
+      "q6": "No",
+      "q7": "4",
+      "q8": "8 hours",
+      "q9": "Flexible hybrid — I choose which days to come in based on what I need to accomplish that week. Autonomy is key.",
+      "q10": "2025-02-26"
+    }
+  },
+  {
+    "id": "r_044",
+    "submitted_at": "2026-02-18T18:48:27.541Z",
+    "_persona": "C",
+    "answers": {
+      "q1": "8",
+      "q2": "1–2 years",
+      "q3": "Design / Creative",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Jira / Linear",
+        "Figma / Miro",
+        "Google Workspace"
+      ],
+      "q5": "Onboarding new team members remotely takes much longer than in-person.",
+      "q6": "Yes",
+      "q7": "5",
+      "q8": "9–10 hours",
+      "q9": "Flexible hybrid — I choose which days to come in based on what I need to accomplish that week. Autonomy is key.",
+      "q10": "2024-05-28"
+    }
+  },
+  {
+    "id": "r_045",
+    "submitted_at": "2026-02-20T03:41:50.636Z",
+    "_persona": "C",
+    "answers": {
+      "q1": "6",
+      "q2": "3–5 years",
+      "q3": "Engineering / Development",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Notion / Confluence",
+        "Jira / Linear"
+      ],
+      "q5": "Context-switching between too many communication channels (Slack, email, meetings).",
+      "q6": "No",
+      "q7": "5",
+      "q8": "8 hours",
+      "q9": "Remote-first with a well-equipped shared office available whenever I need it. No mandated days, but a great space when I want human contact.",
+      "q10": "2023-11-07"
+    }
+  },
+  {
+    "id": "r_046",
+    "submitted_at": "2026-02-20T09:21:40.788Z",
+    "_persona": "B",
+    "answers": {
+      "q1": "4",
+      "q2": "6–12 months",
+      "q3": "Sales / Marketing",
+      "q4": [
+        "Slack / Teams"
+      ],
+      "q5": "No dedicated desk; working from the kitchen table hurts my posture and focus.",
+      "q6": "No",
+      "q7": "1",
+      "q8": "8 hours",
+      "q9": "I struggle working from home right now; a 4-day in-office schedule with one remote day would work best for me.",
+      "q10": "2025-04-14"
+    }
+  },
+  {
+    "id": "r_047",
+    "submitted_at": "2026-02-21T03:27:40.456Z",
+    "_persona": "B",
+    "answers": {
+      "q1": "2",
+      "q2": "6–12 months",
+      "q3": "HR / People",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "Google Workspace",
+        "Jira / Linear"
+      ],
+      "q5": "Struggling to \"switch off\" — the laptop is always there.",
+      "q6": "No",
+      "q7": "1",
+      "q8": "More than 10 hours",
+      "q9": "I struggle working from home right now; a 4-day in-office schedule with one remote day would work best for me.",
+      "q10": "2025-10-01"
+    }
+  },
+  {
+    "id": "r_048",
+    "submitted_at": "2026-02-23T14:48:51.572Z",
+    "_persona": "B",
+    "answers": {
+      "q1": "5",
+      "q2": "Less than 6 months",
+      "q3": "Finance / Operations",
+      "q4": [
+        "GitHub / GitLab"
+      ],
+      "q5": "Distractions at home (kids, noise, chores) make it hard to focus.",
+      "q6": "No",
+      "q7": "2",
+      "q8": "More than 10 hours",
+      "q9": "I would like a hybrid setup — 3 days in-office and 2 from home. Enough in-person time to feel connected but still some flexibility.",
+      "q10": "2025-10-21"
+    }
+  },
+  {
+    "id": "r_049",
+    "submitted_at": "2026-02-23T21:45:57.186Z",
+    "_persona": "A",
+    "answers": {
+      "q1": "10",
+      "q2": "More than 5 years",
+      "q3": "Engineering / Development",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "GitHub / GitLab",
+        "Loom / async video"
+      ],
+      "q5": "Occasional internet outages disrupt video calls.",
+      "q6": "Yes",
+      "q7": "5",
+      "q8": "6–7 hours",
+      "q9": "Full remote with optional in-person collaboration weeks a few times a year. I value the flexibility to work from anywhere while still meeting colleagues face-to-face.",
+      "q10": "2022-01-08"
+    }
+  },
+  {
+    "id": "r_050",
+    "submitted_at": "2026-02-25T23:51:41.247Z",
+    "_persona": "C",
+    "answers": {
+      "q1": "7",
+      "q2": "3–5 years",
+      "q3": "Product / Project Management",
+      "q4": [
+        "Slack / Teams",
+        "Zoom / Google Meet",
+        "GitHub / GitLab",
+        "Loom / async video"
+      ],
+      "q5": "Getting timely decisions when key stakeholders are in different time zones.",
+      "q6": "Yes",
+      "q7": "3",
+      "q8": "8 hours",
+      "q9": "Flexible hybrid — I choose which days to come in based on what I need to accomplish that week. Autonomy is key.",
+      "q10": "2024-02-22"
+    }
+  }
+]
